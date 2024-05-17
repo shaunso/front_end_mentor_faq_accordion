@@ -1,80 +1,67 @@
-# Frontend Mentor - Results summary component solution
+# Frontend Mentor - FAQ accordion solution
 
-## Screenshot
-
-![Desktop preview of my solution to the challenge](./solution_screenshot.png)
-
-## 18-04-2024
-
-This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz).
 
 ## Table of contents
 
-- [Screenshot](#screenshot)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
 ### The challenge
 
-Users should be able to:
+Users are able to:
 
+- Hide/Show the answer to a question when the question is clicked
+- Navigate the questions and hide/show answers using keyboard navigation alone
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-- Use the local JSON data to dynamically populate the content
-- When user clicks continue, the data output is randomised to produce a different set of values
 
+### Screenshot
 
+[Desktop preview of my solution to the challenge](./desktop_solution.png)
+[Mobile preview of my solution to the challenge](./mobile_solution.png)
 
 ### Links
 
-- Solution URL: (https://github.com/shaunso/front_end_mentor_results_summary_component.git)
-- Live Site URL: (https://shaunso.github.io/front_end_mentor_results_summary_component/)
+- Solution URL: (https://github.com/shaunso/front_end_mentor_faq_accordion.git)
+- Live Site URL: (https://your-live-site-url.com)
 
 ## My process
 
-- Begun by focussing on the layout of the page without any styles.
-- Mobile:
-    - used a 4x1 grid to layout this page on mobile devices
-    - within the main grid sections with the result and summary, display flex is used to layout the items in each section
-    - Javascript is used to dynamically populate the results output
-    - Uses D3.js to draw the graphs
-
-- Media queries used to dynamically adjust the grid layout based on the screen size of the device
-
 ### Built with
 
-- Semantic HTML5 markup
+- HTML5
 - CSS custom properties
+- Vanilla JavaScript
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- Vanilla JS
 
 ### What I learned
 
-- DOM manipulation
-- using async/await to fetch data from a local JSON file
+- @keyframes & animations
+- the horizontal rule element
+- .addEventListener
+- using 'position: fixed' to add a footer to the page
+- the '<button>' element and not '<div>' element is used to enable keyboard navigation of a web page; which in turn makes the element interactive including for focus states
+- solidified my understanding of media queries
+- '.classList.toggle'
 
 ### Continued development
 
-- Responsive layouts
-
-- Footers
-
-- JSON
-
-- APIs
-
-- Event Listeners
+- 'keydown' & 'keyup' event listeners
+- '.classList'
 
 ## Author
 
-- Frontend Mentor - [@shaunso](https://www.frontendmentor.io/profile/shaunso)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
