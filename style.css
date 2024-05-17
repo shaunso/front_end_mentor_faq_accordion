@@ -13,10 +13,6 @@
   font-family: work sans, lato, serif;
 }
 
-/* html {
-  scrollbar-gutter: stable;
-} */
-
 body {
   background-color: var(--light-pink);
 }
@@ -54,7 +50,16 @@ h1 {
     row-gap: 1.5rem;
   }
 
-  @media (min-width: 376px) {
+  @media (min-width: 376px) and (max-width: 735px) {
+    width: 80%;
+    margin: 0 auto;
+    top: -150px;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    row-gap: 2rem;
+  }
+
+  @media (min-width: 736px) {
     width: 600px;
     top: -150px;
     padding: 2.5rem;
@@ -76,16 +81,26 @@ h1 {
     width: 24px;
   }
 
-  @media (max-width: 375px) {
+  @media (min-width: 376px) and (max-width: 735px) {
+    height: 32px;
+    width: 32px;
+    /* margin-right: 1rem; */
+  }
+
+  @media (min-width: 736px) {
     height: 40px;
     width: 40px;
   } 
 }
 
 #container-heading>h1 {
-  @media (min-width: 376px) {
-    font-size: 3.25rem;
+  @media (min-width: 376px) and (max-width: 735px) {
+    font-size: 2rem;
   }
+
+  @media (min-width: 736px) {
+    font-size: 3.25rem;
+  } 
 }
 
 #faq-group-container {
@@ -96,7 +111,11 @@ h1 {
     row-gap: 1.25rem;
   }
 
-  @media (min-width: 376px) {
+  @media (min-width: 376px) and (max-width: 735px) {
+    row-gap: 1.375rem;
+  }
+
+  @media (min-width: 736px) {
     row-gap: 1.5rem;
   }
 }
@@ -108,10 +127,21 @@ h1 {
   @media (max-width: 375px) {
     row-gap: 1.25rem;
   }
+  
+  @media (min-width: 376px) and (max-width: 735px) {
+    row-gap: 1.375rem;
+  }
 
   @media (min-width: 376px) {
     row-gap: 1.5rem;
   }
+}
+
+#faq-1.expand, #faq-2.expand, #faq-3.expand, #faq-4.expand {
+	animation: mymove 500ms forwards ease-out;
+}
+@keyframes mymove {
+  to {height: auto;}
 }
 
 .faq-header {
@@ -119,26 +149,45 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+.button {
+  border: none;
+  background-color: transparent;
+}
+.button:hover {
+  cursor: pointer;
+}
 .faq-header:hover {
   cursor: pointer;
 }
-.faq-header>h4 {
+.faq-header>h4, .button>h4 {
   color: hsl(292, 42%, 14%);
   font-weight: 600;
 
   @media (max-width: 375px) {
-    width: 225px;    
+    width: 225px;
+    text-align: left;
   }
 
-  @media (min-width: 376px) {
+  @media (min-width: 376px) and (max-width: 735px) {
+    width: 75%;
+    text-align: left;
+  }
+
+  @media (min-width: 736px) {
     font-size: 1.125rem;
-    width: 100%
+    width: 100%;
   }
 }
-.faq-header>h4:hover {
+.faq-header>h4:hover, .button>h4:hover {
   color: hsl(281, 83%, 54%);
 }
-.faq-header>img {
+.faq-header>.icon {
+  width: 30px;
+  height: 30px;
+  background-image: url("./assets/images/icon-plus.svg");
+}
+.faq-header>.icon.other {
+  background-image: url("./assets/images/icon-minus.svg");
   width: 30px;
   height: 30px;
 }
@@ -149,7 +198,6 @@ h1 {
     margin-top: 4px;
   }
 }
-
 .faq-answer.visible {
   display: block;
   color: #8c6991;
@@ -169,43 +217,25 @@ hr {
   border: 1px solid hsl(275, 100%, 97%);
 }
 
-#faq-1.expand, #faq-2.expand, #faq-3.expand, #faq-4.expand {
-	animation: mymove 500ms forwards ease-out;
-}
-@keyframes mymove {
-  to {height: auto;}
-}
-
-.icon {
-  background-image: url("./assets/images/icon-plus.svg");
-  width: 30px;
-  height: 30px;
-}
-
-.icon.other {
-  background-image: url("./assets/images/icon-minus.svg");
-  width: 30px;
-  height: 30px;
-}
-
 #footer {
   position: fixed;
   width: 100%;
   bottom: 0vh;
-  height: 5vh;
-  background-color: var(--grayish-purple);
-  opacity: 50;
+  height: 4vh;
+  background-color: hsla(292, 16%, 49%, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
+  @media (max-width: 375px) {
+    flex-direction: column;
+  }
+}
 .attribution { 
   font-size: 11px; 
-  text-align: center; 
   color: var(--light-pink);
-
 }
 .attribution a { 
   color: var(--dark-purple); 
 }
+
